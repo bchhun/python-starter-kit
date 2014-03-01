@@ -1,7 +1,7 @@
 # python-starter-kit
 
 
-Pour faciliter la vie de mes mentorés ALTIMaître. 
+Pour faciliter la vie de mes mentorés ALTIMaître.
 
 Le but de ce petit projet est de faciliter le démarrage d'un environnement de travail pythonique, et ce, peu importe la nature du système d'exploitation hôte.
 
@@ -15,22 +15,26 @@ Téléchargez et installez la dernière version correspondant à l'architecture 
 
 Téléchargez et installez la dernière version correspondant à l'architecture et au système d'exploitation de votre ordinateur.
 
-### [Fabric](http://docs.fabfile.org/en/1.8/)
+## Procédures pour monter la VM de développement
 
-#### Linux
+1. Installez les dépendances mentionnées plus haut
+2. Déposez le code de votre projet dans le dossier *src*
+2. Rendez vous dans le dossier *vagrant*
+3. Tapez la commande ```vagrant up```
+4. Une fois que tout le processus de la création de la VM a été finalisé, tapez ```vagrant ssh```
+5. Vous êtes maintenant dans la machine virtuel et votre code est partagé ici dans le dossier ```/home/vagrant/python-starter-kit```
 
-	$ sudo pip install fabric
+## FAQ
 
-#### Windows
+### Quels sont les commandes vagrant utiles ?
 
-1. Installez Python
-2. Téléchargez et installez [ez_setup](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py)
-3. Téléchargez et installez [PyCrypto](http://www.voidspace.org.uk/python/modules.shtml#pycrypto)
-4. Installez *Pip*
+Toutes les commandes ci-dessous doivent être éxécutés dans le dossier vagrant de la manière suivante:
 
-	$ easy_install pip
+    vagrant [nom de la commande]
 
-4. Installez *fabric* avec *pip*
-
-	$ pip install fabric
+* **up**: pour créer la machine virtuel
+* **destroy**: détruire la machine virtuel
+* **ssh**: pour se connecter en SSH sur la machine virtuel
+* **suspend**: pour mettre la machine virtuel en pause
+* **resume**: pour remettre une machine virtuel en marche
 
