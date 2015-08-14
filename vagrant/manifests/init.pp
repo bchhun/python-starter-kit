@@ -25,6 +25,11 @@ class python {
       require => Package["python-dev", "python-pip"]
     }
 
+    exec { "create-virtualenv":
+      command => "/usr/local/bin/virtualenv /home/vagrant/venv",
+      require => Exec["virtualenv"]
+    }
+
 }
 
 class pythondev {
